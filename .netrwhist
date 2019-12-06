@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/mnt/c/Users/Eric Campbell/Documents/teaching/2018-2019/misc'
+let g:netrw_dirhist_2='/mnt/c/Users/Eric Campbell/Documents/teaching/2018-2019/misc/makefiles'
+let g:netrw_dirhist_3='/mnt/c/Users/Eric Campbell/Documents/teaching/2019-2020/misc/questions book/tex7'
+let g:netrw_dirhist_4='/mnt/c/Users/Eric Campbell/Documents/teaching/2019-2020/misc/lps'
+let g:netrw_dirhist_5='/mnt/c/Users/Eric Campbell/Documents/teaching/2019-2020/misc/latex'
+let g:netrw_dirhist_6='/mnt/c/Users/Eric Campbell/Documents/teaching/2019-2020/misc/makefiles'
+let g:netrw_dirhist_7='/mnt/c/Users/Eric Campbell/Documents/teaching/2019-2020/math30-1/7-polynomialFunctionsAndEquations'
+let g:netrw_dirhist_8='/mnt/c/Users/Eric Campbell/Documents/teaching/2019-2020/programming9/2-cse1220clientSideScripting2/assignments-9y/tourism/Bahamas Tourism-Ark and Alex'
