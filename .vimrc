@@ -6,7 +6,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 "vim-plug configuration
-call plug#begin('~/vim/bundle')
+call plug#begin('~/.vim/bundle')
 
 "Plugins
 Plug 'lervag/vimtex'
