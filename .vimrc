@@ -14,6 +14,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'SirVer/ultisnips'
 Plug 'wellle/targets.vim' "better text objects
 Plug 'pangloss/vim-javascript'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 "End vim-plug stuff
