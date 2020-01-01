@@ -1,29 +1,22 @@
-"Vundle 
-set nocompatible
-filetype off
+" Automatic installation of vim-plug
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+      \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-"set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-"let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+"vim-plug configuration
+call plug#begin('~/vim/bundle')
 
 "Plugins
-Plugin 'lervag/vimtex'
-Plugin 'vim-airline/vim-airline'
-Plugin 'SirVer/ultisnips'
-Plugin 'wellle/targets.vim' "better text objects
-Plugin 'pangloss/vim-javascript'
+Plug 'lervag/vimtex'
+Plug 'vim-airline/vim-airline'
+Plug 'SirVer/ultisnips'
+Plug 'wellle/targets.vim' "better text objects
+Plug 'pangloss/vim-javascript'
 
-
-"More Plugin commands
-"...
-
-
-call vundle#end()
-filetype plugin indent on
-"End Vundle stuff
+call plug#end()
+"End vim-plug stuff
 
 
 "Setting sumatra pdf as the viewer
