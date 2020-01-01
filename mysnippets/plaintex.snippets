@@ -168,9 +168,9 @@ endsnippet
 
 snippet mcq "Multiple Choice Question"
 \question[1] $1 
-	\begin{randomizechoices}
-		$2
-	\end{randomizechoices}
+\begin{randomizechoices}
+	$2
+\end{randomizechoices}
 $0
 endsnippet
 
@@ -234,6 +234,12 @@ snippet optframe "A frame with optional parameters" bA
 \end{frame}
 endsnippet
 
+snippet exframe "An example frame" bA
+\begin{frame}[fragile, allowframebreaks]{Example --- $1}
+	$2
+\end{frame}
+endsnippet
+
 snippet part "Parts environment" bA
 \begin{parts}
 	\part$0
@@ -274,7 +280,7 @@ snippet pac "Package" b
 \usepackage[${1:options}]{${2:package}}$0
 endsnippet
 
-snippet => "implies" Ai
+snippet => "implies" i
 \implies
 endsnippet
 

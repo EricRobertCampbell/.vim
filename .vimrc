@@ -13,6 +13,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'lervag/vimtex'
 Plugin 'vim-airline/vim-airline'
 Plugin 'SirVer/ultisnips'
+Plugin 'wellle/targets.vim' "better text objects
+Plugin 'pangloss/vim-javascript'
 
 
 "More Plugin commands
@@ -61,3 +63,7 @@ set spelllang=en_ca
 
 "Hotkey to toggle relative line numbering
 nmap <C-L><C-L> :set invrelativenumber<CR>
+
+
+
+
