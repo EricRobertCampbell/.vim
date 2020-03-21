@@ -55,7 +55,12 @@ snippet patemplate "programming assessment template" b
 \title{$1}
 \author{} \date{}
 \begin{document}
+	\namepoints
+
+	\writtenSection
 	$2
+
+	\programsSection
 \end{document}
 endsnippet
 
@@ -191,8 +196,22 @@ snippet beg "begin{} / end{}" bA
 \\end{$1}
 endsnippet
 
+snippet lsi "lstinputlisting" b
+\lstinputlisting[$1]{$2}$3
+endsnippet
+
+snippet lstl "\begin{lstlisting}[options]...\end{lstlisting}" b
+\begin{lstlisting}[style = $1, autogobble]
+	$2
+\end{lstlisting}$3
+endsnippet
+
+snippet ig "includegraphics" w
+\includegraphics[$1]{$2} $3
+endsnippet
+
 priority 100
-snippet ... "ldots" iA
+snippet ... "ldots" i
 \dots
 endsnippet
 
@@ -289,7 +308,7 @@ snippet =< "implied by" Ai
 endsnippet
 
 context "math()"
-snippet iff "iff" Ai
+snippet iff "iff" i
 \iff
 endsnippet
 
@@ -469,7 +488,7 @@ snippet taylor "taylor" w
 endsnippet
 
 snippet lim "limit" w
-\lim_{${1:n} \to ${2:\infty}} 
+\lim_{${1:n} \to ${2:\infty}} $3
 endsnippet
 
 snippet limsup "limsup" w

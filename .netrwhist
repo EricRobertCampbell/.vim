@@ -1,3 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =1
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/mnt/c/Users/Eric Campbell/Documents/teaching/2019-2020/programming9/3-cse1110structuredProgramming1/assignments-9z/variablesOperationsAndIO/Variables assignment - Alp'
+let g:netrw_dirhist_3='/mnt/c/Users/Eric Campbell/Documents/teaching/2019-2020/programming9/2-cse1220clientSideScripting2/assignments-9z/project-artGallery/ArtGalleryProject - Alp and Japreet'
+let g:netrw_dirhist_2='/mnt/c/Users/Eric Campbell/Documents/teaching/2019-2020/math8/5.5-midtermExam/exam'
 let g:netrw_dirhist_1='/home/ecampbell/.vim/mysnippets'
