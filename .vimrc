@@ -15,17 +15,16 @@ Plug 'SirVer/ultisnips'
 Plug 'wellle/targets.vim' "better text objects
 Plug 'pangloss/vim-javascript'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'tpope/vim-surround'
 
 call plug#end()
 "End vim-plug stuff
 
 
-"Setting sumatra pdf as the viewer
+"Setting the viewer 
 "let g:vimtex_view_general_viewer = 'SumatraPDF'
 let g:vimtex_view_general_viewer = 'zathura'
 
-let g:vimtex_view_general_options = '-reuse-instance -forward-search @tex @line @pdf'
-let g:vimtex_view_general_options_latexmk = '-reuse-instance'
 set conceallevel=1 
 let g:tex_conceal='abdmg'
 
