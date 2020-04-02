@@ -16,6 +16,7 @@ Plug 'wellle/targets.vim' "better text objects
 Plug 'pangloss/vim-javascript'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-surround'
+Plug 'wincent/terminus'
 
 call plug#end()
 "End vim-plug stuff
@@ -60,6 +61,9 @@ set spelllang=en_ca
 nmap <C-L><C-L> :set invrelativenumber<CR>
 
 
+"Tabs
+set tabstop=4
+set shiftwidth=4
 
 
 " Configuration options	copied from https://github.com/neoclide/coc.nvim
@@ -197,5 +201,8 @@ nnoremap <silent> <space>j :<C-u>CocNext<CR>
 nnoremap <silent> <space>k :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p :<C-u>CocListResume<CR>
+
+
+
 
 
