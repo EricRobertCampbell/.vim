@@ -17,6 +17,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-surround'
 Plug 'wincent/terminus'
+Plug 'lervag/wiki.vim'
 
 call plug#end()
 "End vim-plug stuff
@@ -203,6 +204,8 @@ nnoremap <silent> <space>k :<C-u>CocPrev<CR>
 nnoremap <silent> <space>p :<C-u>CocListResume<CR>
 
 
+"Set options for wiki.vim
+let g:wiki_root = '~/Documents/wiki'
 
 
 
