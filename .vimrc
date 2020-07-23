@@ -13,16 +13,25 @@ Plug 'lervag/vimtex'
 Plug 'vim-airline/vim-airline'
 Plug 'SirVer/ultisnips'
 Plug 'wellle/targets.vim' "better text objects
-Plug 'pangloss/vim-javascript'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-surround'
 Plug 'wincent/terminus'
 Plug 'lervag/wiki.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-commentary'
+
+"Webdev specific plugins
+Plug 'pangloss/vim-javascript'
+Plug 'jparise/vim-graphql'
+Plug 'maxmellon/vim-jsx-pretty'
 
 call plug#end()
 "End vim-plug stuff
 
+"for prettier
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
+"LATEX STUFF
 "Setting the viewer 
 "let g:vimtex_view_general_viewer = 'SumatraPDF'
 let g:vimtex_view_general_viewer = 'zathura'
@@ -37,6 +46,7 @@ let g:tex_conceal='abdmg'
 "remove the warning about needing clientserver
 let g:vimtex_compiler_latexmk = {'callback':0}
 
+"OTHER OPTIONS
 "options for airline
 "Show names of open buffers
 let g:airline#extensions#tabline#enabled = 1
@@ -52,6 +62,7 @@ let g:UltiSnipsSnippetsDir='/home/ecampbell/.vim/mysnippets'
 let g:UltiSnipsSnippetDirectories=["mysnippets"]
 
 set background=dark
+set splitright
 
 "Spelling stuff
 set spelllang=en_ca

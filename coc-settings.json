@@ -1,3 +1,9 @@
 {
-	"snippets.userSnippetsDirectory": "/home/ecampbell/.vim/mysnippets"
+	"snippets.userSnippetsDirectory": "/home/ecampbell/.vim/mysnippets",
+	"coc.preferences.formatOnSaveFiletypes": ["javascript", "javascriptreact"],
+	"tsserver.formatOnType": true,
+	"coc.preferences.formatOnType": true,
+	"eslint.autoFixOnSave": true,
+   "eslint.filetypes": ["javasript", "javascriptreact"]	
 }
+
