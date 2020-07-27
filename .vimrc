@@ -16,9 +16,10 @@ Plug 'wellle/targets.vim' "better text objects
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-surround'
 Plug 'wincent/terminus'
-Plug 'lervag/wiki.vim'
+Plug 'vimwiki/vimwiki'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
+Plug 'preservim/nerdtree'
 
 "Webdev specific plugins
 Plug 'pangloss/vim-javascript'
@@ -60,6 +61,10 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsSnippetsDir='/home/ecampbell/.vim/mysnippets'
 let g:UltiSnipsSnippetDirectories=["mysnippets"]
+
+"Options for NERDTree
+map <C-n> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif 
 
 set background=dark
 set splitright

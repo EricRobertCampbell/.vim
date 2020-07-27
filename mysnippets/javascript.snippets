@@ -12,7 +12,7 @@ while ($1) {
 }$3
 endsnippet
 
-snippet c "curly braces with identation" i
+snippet c "curly braces with identation" i 
 {
 	$1
 }
@@ -68,6 +68,24 @@ snippet iife "Immediately-invoked function expression"
 })();
 endsnippet
 
+############# React, &c.
+priority 1
+
+snippet imp "Import"
+import $1 from '$2';
+endsnippet
+
+snippet ir "import react"
+import React from 'react';
+endsnippet
+
+snippet rfc "React functional component"
+const $1 = ($2) => {
+	$3
+};
+endsnippet
+
+priority 0
 ############# Node.js
 snippet re "require" b
 const `!p
