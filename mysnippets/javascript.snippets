@@ -30,7 +30,7 @@ function($1) {
 }$3
 endsnippet
 
-snippet af "arrow function" i
+snippet mk "arrow function" iA
 ($1) => {
 	$2
 }$3
@@ -44,8 +44,12 @@ snippet cl "console.log(...)" i
 console.log($1);
 endsnippet
 
-snippet clj "JSON.stringify formatted" i
+snippet clj "console.log JSON.stringify formatted" i
 console.log(JSON.stringify($1, null, 2))
+endsnippet
+
+snippet js "JSON.stringify, formatted" i
+JSON.stringify($1, null, 4)$2
 endsnippet
 
 snippet if "if statement" i
@@ -54,7 +58,7 @@ if ($1) {
 }$3
 endsnippet
 
-snippet els "else statement" i
+snippet el "else statement" i
 else {
 	$1
 }$2
@@ -71,6 +75,14 @@ endsnippet
 ############# React, &c.
 priority 1
 
+snippet ed "Export default" i
+export default $1;
+endsnippet
+
+snippet ex "Export" i
+export $1;
+endsnippet
+
 snippet imp "Import"
 import $1 from '$2';
 endsnippet
@@ -84,6 +96,7 @@ const $1 = ($2) => {
 	$3
 };
 endsnippet
+
 
 priority 0
 ############# Node.js

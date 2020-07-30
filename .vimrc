@@ -74,6 +74,7 @@ set spelllang=en_ca
 "set spell "Not set because it is SUPER ANNOYING
 
 
+set number
 "Hotkey to toggle relative line numbering
 nmap <C-L><C-L> :set invrelativenumber<CR>
 
