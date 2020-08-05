@@ -69,6 +69,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 set background=dark
 set splitright
 
+
 "Spelling stuff
 set spelllang=en_ca
 "set spell "Not set because it is SUPER ANNOYING
