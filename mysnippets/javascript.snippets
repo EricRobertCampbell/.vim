@@ -1,5 +1,15 @@
 # Original file from https://github.com/ericdouglas/UltiSnips.git
 ############# MISC
+snippet jk "Add a tag" w
+<$1>
+	$2
+</${1/([\w\.]+).*/$1/}>
+endsnippet
+
+snippet jkk "Add a self-closing tag" w
+<$1 />$2
+endsnippet
+
 snippet for "for" i
 for ($1) {
 	$2
@@ -12,11 +22,13 @@ while ($1) {
 }$3
 endsnippet
 
+priority -1
 snippet c "curly braces with identation" i 
 {
 	$1
 }
 endsnippet
+priority 0
 
 snippet fn "named function" i
 function $1($2) {
@@ -58,7 +70,7 @@ if ($1) {
 }$3
 endsnippet
 
-snippet el "else statement" i
+snippet el "else statement" w
 else {
 	$1
 }$2
@@ -79,11 +91,11 @@ snippet ed "Export default"
 export default $1;
 endsnippet
 
-snippet ex "Export" i
+snippet ex "Export" b
 export $1;
 endsnippet
 
-snippet imp "Import"
+snippet 'imp?o?r?t?' "Import" rb
 import $1 from '$2';
 endsnippet
 
@@ -156,26 +168,29 @@ snippet ct "@constructor"
 @constructor
 endsnippet
 
-############# Tests
+############# Tests / Testing
 ##### jest
-#snippet t "add jest test" i
-#test('$1', () => {
-#  $2
-#})
-#endsnippet
-
-##### end jest
-
-snippet ds "describe a test suite" b
-describe('#$1', function() {
+snippet test "add jest test" i
+test('$1', () => {
   $2
-})
+});$3
 endsnippet
 
-snippet it "describe a test" b
-it('Should $1', function() {
+snippet 'todo|test.to?d?o?' "add jest todo test" rb
+test.todo('$1');$2
+endsnippet
+
+
+snippet 'desc?r?i?b?e?' "describe a test suite" br
+describe('$1', () => {
   $2
-})
+});$3
+endsnippet
+
+snippet 'it' "describe a test" br
+it('Should $1', () => {
+  $2
+})$3
 endsnippet
 
 snippet ae "afterEach" b
@@ -190,9 +205,17 @@ beforeEach(function($1) {
 })
 endsnippet
 
-snippet ex "expect" b
-expect($1).$2
+snippet 'expe?c?t?' "expect" rb
+expect($1).$2;
 endsnippet
+##### end jest
+
+##### begin react-testing-library
+snippet 'bid' "Be In The Document" i
+beInTheDocument();
+endsnippet
+
+#####
 
 ############# ES6
 snippet im "import" b
