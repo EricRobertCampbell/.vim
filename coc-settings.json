@@ -1,6 +1,7 @@
 {
 	"snippets.userSnippetsDirectory": "/home/ecampbell/.vim/mysnippets",
-	"coc.preferences.formatOnSaveFiletypes": ["javascript", "javascriptreact"],
+	"coc.preferences.formatOnSaveFiletypes": ["javascript", "javascriptreact", "python"],
+	"python.formatting.provider": "black",
 	"tsserver.formatOnType": true,
 	"coc.preferences.formatOnType": true,
 	"eslint.autoFixOnSave": true,

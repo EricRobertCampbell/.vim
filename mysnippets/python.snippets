@@ -1,3 +1,31 @@
 snippet sb "she bang" b
 #!/usr/bin/env python3
 endsnippet
+
+snippet 'imp?o?r?t?' "import" rb
+import $1
+endsnippet
+
+snippet 'from?' "import from" rb
+from $1 import $2
+endsnippet
+
+snippet def "define a function" w
+def ${1:Name}(${2:args}) -> ${3:Return Type}:
+	$4
+endsnippet
+
+snippet if "if" b
+if $1:
+	$2
+endsnippet
+
+snippet for "for loop" b
+for $1 in $2:
+	$3
+endsnippet
+
+snippet while "while loop" b
+while $1:
+	$2
+endsnippet

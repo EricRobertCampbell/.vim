@@ -20,11 +20,16 @@ Plug 'vimwiki/vimwiki'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 Plug 'preservim/nerdtree'
+Plug 'sheerun/vim-polyglot'
 
 "Webdev specific plugins
 Plug 'pangloss/vim-javascript'
 Plug 'jparise/vim-graphql'
 Plug 'maxmellon/vim-jsx-pretty'
+
+"Python
+Plug 'jeetsukumaran/vim-pythonsense'
+Plug 'Vimjas/vim-python-pep8-indent'
 
 call plug#end()
 "End vim-plug stuff
