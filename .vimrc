@@ -13,7 +13,6 @@ Plug 'lervag/vimtex'
 Plug 'vim-airline/vim-airline'
 Plug 'SirVer/ultisnips'
 Plug 'wellle/targets.vim' "better text objects
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-surround'
 Plug 'wincent/terminus'
 Plug 'vimwiki/vimwiki'
@@ -21,6 +20,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 Plug 'preservim/nerdtree'
 Plug 'sheerun/vim-polyglot'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "Webdev specific plugins
 Plug 'pangloss/vim-javascript'
@@ -51,6 +51,8 @@ let g:tex_conceal='abdmg'
 
 "remove the warning about needing clientserver
 let g:vimtex_compiler_latexmk = {'callback':0}
+
+let g:tex_flavor = "latex"
 
 "OTHER OPTIONS
 "options for airline
