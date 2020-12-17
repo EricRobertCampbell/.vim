@@ -28,6 +28,14 @@ do {
 } while ($2);
 endsnippet
 
+snippet try "try...catch block" b
+try {
+	$1
+} catch {
+	$2
+}$3
+endsnippet
+
 priority -1
 snippet c "curly braces with identation" i 
 {
@@ -59,7 +67,7 @@ snippet fa "one line arrow function" i
 endsnippet
 
 snippet cl "console.log(...)" i
-console.log($1);
+console.log($1)
 endsnippet
 
 snippet clj "console.log JSON.stringify formatted" i
@@ -67,19 +75,25 @@ console.log(JSON.stringify($1, null, 2))
 endsnippet
 
 snippet js "JSON.stringify, formatted" i
-JSON.stringify($1, null, 4)$2
+JSON.stringify($1, null, 4)$0
 endsnippet
 
-snippet if "if statement" i
+snippet if "if statement" b
 if ($1) {
 	$2
-}$3
+}$0
 endsnippet
 
-snippet el "else statement" w
+snippet 'els?e?' "else statement" br
 else {
 	$1
 }$2
+endsnippet
+
+snippet elif "else if" w
+else if ($1) {
+	$2
+} $0
 endsnippet
 
 snippet iife "Immediately-invoked function expression"
@@ -89,6 +103,7 @@ snippet iife "Immediately-invoked function expression"
   $1
 })();
 endsnippet
+
 
 ############# React, &c.
 priority 1
@@ -106,7 +121,7 @@ import $1 from '$2';
 endsnippet
 
 snippet ir "import react"
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 endsnippet
 
 snippet rfc "React functional component"
@@ -156,6 +171,14 @@ var $1 = require('$1')
 endsnippet
 
 ############# JSDoc
+snippet ds "JS Function Docstring" b
+/**
+* ${1:DESCRIPTION OF FUNCTION}
+* ${2:@param {type} name - description}
+* ${3:@returns {type} - description}
+*/
+endsnippet
+
 snippet cm
 /**
  * ${0:${VISUAL}}
@@ -176,39 +199,46 @@ endsnippet
 
 ############# Tests / Testing
 ##### jest
-snippet test "add jest test" i
-test('$1', () => {
+snippet 'test?' "add test" br
+test('Should $1', () => {
   $2
-});$3
+});$0
+endsnippet
+
+snippet 'it' "add test" br
+it('Should $1', () => {
+  $2
+});$0
+endsnippet
+
+snippet 'skip|it.sk?i?p?' "Test to skip (for now...)" rb
+it.skip('Should $1', () => {
+  $2
+});$0
 endsnippet
 
 snippet 'todo|test.to?d?o?' "add jest todo test" rb
-test.todo('$1');$2
+test.todo('Should $1');$0
 endsnippet
 
 
 snippet 'desc?r?i?b?e?' "describe a test suite" br
 describe('$1', () => {
   $2
-});$3
+});$0
 endsnippet
 
-snippet 'it' "describe a test" br
-it('Should $1', () => {
-  $2
-})$3
-endsnippet
 
 snippet ae "afterEach" b
 afterEach(function($1) {
   $2
-})
+})$0
 endsnippet
 
 snippet be "beforeEach" b
 beforeEach(function($1) {
   $2
-})
+})$0
 endsnippet
 
 snippet 'expe?c?t?' "expect" rb
@@ -222,6 +252,30 @@ beInTheDocument();
 endsnippet
 
 #####
+
+##### Cypress #####
+
+snippet '\.?exis?t?' ".should('exist')" r
+.should('exist')$0
+endsnippet
+
+snippet '\/?shou?l?d?' ".should" r
+.should($1)$0
+endsnippet
+
+snippet 'c?y?\.?fbt' "cy.findByText(/ /i)" r
+cy.findByText(/$1/i)$0
+endsnippet
+
+snippet 'c?y?\.?fblt' "cy.findByLabelText(/ /i)" r
+cy.findByLabelText(/$1/i)$0
+endsnippet
+
+snippet 'c?y?\.?fbr' "cy.findByRole()" r
+cy.findByRole('$1', ${2:{name: }})$0
+endsnippet
+
+###################
 
 ############# ES6
 snippet im "import" b
