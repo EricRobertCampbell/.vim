@@ -11,7 +11,6 @@ call plug#begin('~/.vim/bundle')
 "Plugins
 Plug 'ycm-core/YouCompleteMe'
 
-Plug 'vim-airline/vim-airline'
 Plug 'SirVer/ultisnips'
 Plug 'ervandew/supertab'
 Plug 'wellle/targets.vim' "better text objects
@@ -21,6 +20,14 @@ Plug 'vimwiki/vimwiki'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 Plug 'preservim/nerdtree'
+Plug 'prettier/vim-prettier', {'do': 'yarn install'}
+Plug 'vim-airline/vim-airline'
+Plug 'psf/black', {'branch': 'stable'}
+Plug 'junegunn/fzf', {'do': { -> fzf#install() }}
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-fugitive'
+
+Plug 'lervag/vimtex'
 
 call plug#end()
 "End vim-plug stuff
@@ -29,9 +36,9 @@ call plug#end()
 
 "Make YCM compatible with UltiSnips (using supertab)
 "Source: https://stackoverflow.com/questions/14896327/ultisnips-and-youcompleteme
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_select_completion = ['<C-h>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<C-n>'
+let g:SuperTabDefaultCompletionType = '<C-h>'
 
 " better key bindings for UltiSnipsExpandTrigger
 let g:UltiSnipsExpandTrigger = "<tab>"
@@ -46,11 +53,45 @@ let g:UltiSnipsSnippetDirectories=["mysnippets"]
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif 
 
+"Options for vim-prettier
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0
 
-" Non-package configurations
-"
+"Options for airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+
+" " Options for vim-autopep8
+" let g:autopep8_on_save = 1
+" let g:autopep8_disable_show_diff = 1
+
+" options for black
+autocmd BufWritePre *.py execute ':Black'
+
+
+"" vimtex settings
+let g:tex_flavor = 'latex'
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+set conceallevel=1
+let g:tex_conceal='abdmg'
+
+" fzf-related configuration options
+" Open the non-gitignored files in the current directory
+nnoremap <C-p> :GFiles<Cr>
+" Open up Ag (silver searcher)
+nnoremap <C-g> :Ag<Cr>
+" Open buffers
+nnoremap <silent><leader>b :Buffers<Cr>
+
+"" Non-package configurations
+
+" set font
+set guifont=IBM\ Plex\ Mono:h14,:Hack\ 14,Source\ Code\ Pro\ 12,Bitstream\ Vera\ Sans\ Mono\ 11
+
 set background=dark
 set splitright
+set hlsearch "to highlight all occurrences of a word while searching for it
 
 set number
 "Hotkey to toggle relative line numbering
