@@ -259,12 +259,20 @@ snippet '\.?exis?t?' ".should('exist')" r
 .should('exist')$0
 endsnippet
 
-snippet '\/?shou?l?d?' ".should" r
+snippet '\.?shou?l?d?' ".should" r
 .should($1)$0
+endsnippet
+
+snippet '\.?c?l?ick' ".click()" r
+.click($1)$0
 endsnippet
 
 snippet 'c?y?\.?fbt' "cy.findByText(/ /i)" r
 cy.findByText(/$1/i)$0
+endsnippet
+
+snippet 'c?y?\.?fabt' "cy.findAllByText(/ /i)" r
+cy.findAllByText(/$1/i)$0
 endsnippet
 
 snippet 'c?y?\.?fblt' "cy.findByLabelText(/ /i)" r

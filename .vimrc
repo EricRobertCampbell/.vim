@@ -20,11 +20,13 @@ Plug 'vimwiki/vimwiki'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 Plug 'preservim/nerdtree'
-Plug 'prettier/vim-prettier', {'do': 'yarn install'}
+Plug 'prettier/vim-prettier', {'do': 'yarn install',
+			\ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml'] }
 Plug 'vim-airline/vim-airline'
 Plug 'psf/black', {'branch': 'stable'}
 Plug 'junegunn/fzf', {'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'
+Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
 
 Plug 'lervag/vimtex'
@@ -60,10 +62,6 @@ let g:prettier#autoformat_require_pragma = 0
 "Options for airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
-
-" " Options for vim-autopep8
-" let g:autopep8_on_save = 1
-" let g:autopep8_disable_show_diff = 1
 
 " options for black
 autocmd BufWritePre *.py execute ':Black'

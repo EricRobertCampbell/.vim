@@ -1,0 +1,11 @@
+# swap files
+.swj
+.swk
+.swl
+.swm
+.swn
+.swo
+.swp
+
+# bundle files - will be added on plugin installation
+bundle/*
