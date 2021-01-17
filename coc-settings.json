@@ -1,0 +1,6 @@
+{
+	"eslint.run": "onType",
+	"diagnostic.errorSign": "x",
+	"diagnostic.warningSign": "x",
+	"diagnostic.infoSign": "x"
+}
