@@ -9,3 +9,6 @@
 
 # bundle files - will be added on plugin installation
 bundle/*
+
+# black - files for black python formatter - will be added on installation
+black
